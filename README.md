@@ -26,9 +26,9 @@ Please write a script called `counts.py` that summarizes recent real estate tran
 
 1. Next, we'll create a two-level dictionary to hold data extracted from the input file. It will group sale prices by municipality and year. Start by setting variable `trades` to an empty dictionary `{}`.
 
-1. Then, start a `for` loop that uses `muni` as the running variable and loops over `places`. Within the loop, do the following:
+1. Then, start a `for` loop that uses `muni` as the loop variable and loops over `places`. Within the loop, do the following:
 
-    1. Create a new dictionary called `by_year` by using a dictionary comprehension that loops over `years` using `y` as the running variable, and creates key-value pairs with `y` as the key and an empty list as the value. That is, the left portion of the dictionary comprehension should be `y:[]`.
+    1. Create a new dictionary called `by_year` by using a dictionary comprehension that loops over `years` using `y` as the loop variable, and creates key-value pairs with `y` as the key and an empty list as the value. That is, the left portion of the dictionary comprehension should be `y:[]`.
 
     1. Put the new dictionary in `trades` under the name of the current municipality by setting `trades[muni]` equal to `by_year`.
 
@@ -76,13 +76,13 @@ Please write a script called `counts.py` that summarizes recent real estate tran
 
 1. The instruction above concludes the `for` loop. Now we'll print out the results. Add a `print` statement that prints the heading "Summary of Transactions".
 
-1. Start a `for` loop using `muni` as the running variable and looping over the result of calling `sorted()` on the keys from `trades`. Within the loop do the following.
+1. Start a `for` loop using `muni` as the loop variable and looping over the result of calling `sorted()` on the keys from `trades`. Within the loop do the following.
 
     1. Print the value of `muni`.
 
     1. Set variable `by_year` to the value of `trades` for key `muni`. This will be a dictionary with one key per year, and the value at each key will be a list of the prices for the trades in the that year
 
-    1. Start a `for` loop using `year` as the running variable and looping over the result of calling `sorted()` on the keys from `by_year`. Within the loop do the following:
+    1. Start a `for` loop using `year` as the loop variable and looping over the result of calling `sorted()` on the keys from `by_year`. Within the loop do the following:
 
         1. Set `sales` equal to the value of `by_year` for key `year`.
 
