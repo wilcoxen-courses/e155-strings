@@ -117,11 +117,11 @@ print( word_lengths )
 #  to iterate through a dictonary returning keys and values as tuples.
 #
 
-three_letter = []
+five_letter = []
 for w,l in word_lengths.items():
     if l == 5:
-        three_letter.append(w)
-print(three_letter)
+        five_letter.append(w)
+print(five_letter)
 
 #%%
 #
